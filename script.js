@@ -28,15 +28,20 @@
     btnGroup.addEventListener('click', function(event){
         const btn = event.target;
         
+        // for number btns event
         if(btn.id == 'number'){
             const number = btn.innerText;
             inputNumber = inputNumber + number;
             inputDisplay.value = inputNumber;
         }
+
+        // for delete btn event
         if(btn.id == 'delete'){
             inputNumber = inputNumber.slice(0, -1);
             inputDisplay.value = inputNumber;
         }
+
+        // for remove btn event
         if(btn.id == 'remove'){
             inputNumber = '';
             inputDisplay.value = inputNumber;
